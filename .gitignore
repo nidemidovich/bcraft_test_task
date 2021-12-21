@@ -1,5 +1,2 @@
-.idea/
-bcraft_api/__pycache__/
-bcraft_api/api/__pycache__/
-bcraft_api/db.sqlite3
-task.txt
+/task.txt
+!/bcraft_api/db.sqlite3

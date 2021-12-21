@@ -11,8 +11,12 @@ class Statistics(models.Model):
 
     @property
     def cpc(self):
+        if self.cost is None and self.clicks is None:
+            return None
         return round(self.cost / decimal.Decimal(str(self.clicks)), 2)
 
     @property
     def cpm(self):
+        if self.cost is None and self.clicks is None:
+            return None
         return round(decimal.Decimal(1000) * self.cost / decimal.Decimal(str(self.views)), 2)
